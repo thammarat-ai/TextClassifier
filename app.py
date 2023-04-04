@@ -59,12 +59,13 @@ def main():
     menu = ["Home", "Manage","About"]
     create_table()
     choice = st.sidebar.selectbox("Menu", menu)
+    
     if choice == "Home":
         st.subheader("Home")
         with st.form(key='mlform'):
             col1, col2 = st.columns([2,1])
             with col1:
-                message = st.text_area("Message")
+                message = st.text_area("ข้อความ")
                 submit_message = st.form_submit_button(label='Predict')
             with col2:
                 st.write("Online Incremental ML")
