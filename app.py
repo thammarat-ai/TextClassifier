@@ -65,7 +65,7 @@ def main():
         with st.form(key='mlform'):
             col1, col2 = st.columns([2,1])
             with col1:
-                message = st.text_area("ข้อความ")
+                message = st.text_area("บันทึกข้อความงานที่ได้ทำ")
                 submit_message = st.form_submit_button(label='Predict')
             with col2:
                 st.write("Online Incremental ML")
