@@ -70,7 +70,7 @@ def main():
             with col1:
                 # message = st.text_area("บันทึกข้อความงานที่ได้ทำ")
                 message = st.text_area("บันทึกงานที่ได้รับมอบหมาย", "พานิสิตไปดูงาน", height=200)
-                submit_message = st.form_submit_button(label='Predict')
+                submit_message = st.form_submit_button(label='ตัดคำ')
             with col2:
                 st.write("AI ช่วยวิเคราะห์งานที่ทำเป็นงานงานฝ่ายบุคลากร")
                 st.write("จะทำนายว่าเป็นงานฝ่ายบุคคลหรือ อื่นๆ")
