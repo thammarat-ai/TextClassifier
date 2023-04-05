@@ -56,6 +56,11 @@ if authentication_status == None:
 
 if authentication_status == True:
 
+     # --- sidebar ---
+    authenticator.logout("ออกจากระบบ","sidebar")
+    st.sidebar.title(f"Welcome {name}")
+    # Add a selectbox to the sidebar:
+
 
     # feature_extraction using CountVector
     cvec = CountVectorizer(analyzer=lambda x:x.split(' '))
