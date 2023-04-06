@@ -110,9 +110,10 @@ if authentication_status == True:
             if submit_message:
                 my_text = message
                 my_tokens = text_process(my_text)
-                st.write(my_tokens)
-                # my_bow = cvec.transform(pd.Series([my_tokens]))
-                # my_predictions = lr.predict(my_bow)
+                # st.write(my_tokens)
+                # my_tokens = [my_tokens]
+                my_bow = cvec.transform(pd.Series([my_tokens]))
+                my_predictions = lr.predict(my_bow)
 
 
                 # prediction = model.predict_one(message)
@@ -123,7 +124,7 @@ if authentication_status == True:
                 # add_data(message, prediction, probability, prediction_proba['software'], prediction_proba['hardware'], postdate)
                 st.success("Data Submitted")
 
-                # st.write("Prediction: ", my_predictions)
+                st.write("Prediction: ", my_predictions)
 
                 # res_col1, res_col2 = st.columns(2)
                 # with res_col1:
